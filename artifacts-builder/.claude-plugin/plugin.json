@@ -4,5 +4,7 @@
   "author": {
     "name": "Composio",
     "email": "support@composio.dev"
-  }
+  },
+  "_note": "forked for personal use - experimenting with shadcn/ui component generation",
+  "version": "1.0.0"
 }
