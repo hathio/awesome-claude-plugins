@@ -66,6 +66,5 @@ Your verification should prioritize SDK functionality and best practices over ge
 
 8. **Documentation**:
    - Check for README or basic documentation
-   - Verify setup instructions are complete (install steps, env var setup, how to run)
-   - Note any missing docs but don't fail verification for minor gaps
-   <!-- personal note: I find a lot of submitted examples skip the "how to run" part, worth flagging clearly -->
+   - Verify setup instructions are complete (install steps, how to run, expected output)
+   - Note if examples or sample outputs are missing — these are really helpful for newcomers
