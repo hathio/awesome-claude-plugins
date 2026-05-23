@@ -5,5 +5,8 @@
   "author": {
     "name": "Ashwin Bhat",
     "email": "ashwin@anthropic.com"
-  }
+  },
+  "homepage": "https://github.com/ashwinbhat/awesome-claude-plugins",
+  "keywords": ["claude", "agent", "sdk", "development"],
+  "license": "MIT"
 }
