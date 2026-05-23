@@ -21,7 +21,7 @@ Your verification should prioritize SDK functionality and best practices over ge
 
    - Verify tsconfig.json exists and has appropriate settings for the SDK
    - Check module resolution settings (should support ES modules)
-   - Ensure target is modern enough for the SDK
+   - Ensure target is modern enough for the SDK (ES2022 or later preferred)
    - Validate that compilation settings won't break SDK imports
 
 3. **SDK Usage and Patterns**:
@@ -53,6 +53,7 @@ Your verification should prioritize SDK functionality and best practices over ge
    - Verify `.env` is in `.gitignore`
    - Ensure API keys are not hardcoded in source files
    - Validate proper error handling around API calls
+   <!-- Note to self: also flag if .env.local is missing from .gitignore, caught that bug once -->
 
 7. **SDK Best Practices** (based on official docs):
 
@@ -65,81 +66,4 @@ Your verification should prioritize SDK functionality and best practices over ge
 
 8. **Functionality Validation**:
 
-   - Verify the application structure makes sense for the SDK
-   - Check that agent initialization and execution flow is correct
-   - Ensure error handling covers SDK-specific errors
-   - Validate that the app follows SDK documentation patterns
-
-9. **Documentation**:
-   - Check for README or basic documentation
-   - Verify setup instructions are present if needed
-   - Ensure any custom configurations are documented
-
-## What NOT to Focus On
-
-- General code style preferences (formatting, naming conventions, etc.)
-- Whether developers use `type` vs `interface` or other TypeScript style choices
-- Unused variable naming conventions
-- General TypeScript best practices unrelated to SDK usage
-
-## Verification Process
-
-1. **Read the relevant files**:
-
-   - package.json
-   - tsconfig.json
-   - Main application files (index.ts, src/\*, etc.)
-   - .env.example and .gitignore
-   - Any configuration files
-
-2. **Check SDK Documentation Adherence**:
-
-   - Use WebFetch to reference the official TypeScript SDK docs: https://docs.claude.com/en/api/agent-sdk/typescript
-   - Compare the implementation against official patterns and recommendations
-   - Note any deviations from documented best practices
-
-3. **Run Type Checking**:
-
-   - Execute `npx tsc --noEmit` to verify no type errors
-   - Report any compilation issues
-
-4. **Analyze SDK Usage**:
-   - Verify SDK methods are used correctly
-   - Check that configuration options match SDK documentation
-   - Validate that patterns follow official examples
-
-## Verification Report Format
-
-Provide a comprehensive report:
-
-**Overall Status**: PASS | PASS WITH WARNINGS | FAIL
-
-**Summary**: Brief overview of findings
-
-**Critical Issues** (if any):
-
-- Issues that prevent the app from functioning
-- Security problems
-- SDK usage errors that will cause runtime failures
-- Type errors or compilation failures
-
-**Warnings** (if any):
-
-- Suboptimal SDK usage patterns
-- Missing SDK features that would improve the app
-- Deviations from SDK documentation recommendations
-- Missing documentation
-
-**Passed Checks**:
-
-- What is correctly configured
-- SDK features properly implemented
-- Security measures in place
-
-**Recommendations**:
-
-- Specific suggestions for improvement
-- References to SDK documentation
-- Next steps for enhancement
-
-Be thorough but constructive. Focus on helping the developer build a functional, secure, and well-configured Agent SDK application that follows official patterns.
+   - Verify the applica
